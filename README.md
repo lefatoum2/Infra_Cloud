@@ -46,6 +46,12 @@ services:
 
 ```
 
+## Lancer docker-compose.yml
+
+```
+docker compose -d up
+```
+
 ## Connection à la base de données AWS-RDS
 
 ``` Python
