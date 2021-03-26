@@ -137,7 +137,7 @@ async def facilities():
     return data
 
 
-@app.get("/facilities")
+@app.get("/costname")
 async def costname():
     DataB.connexion()
     data = DataB.costname()
