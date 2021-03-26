@@ -7,6 +7,39 @@ pip install awsebcli --upgrade --user
 
 ```
 
+## Docker-compse après la création de la base de données postgres sur RDS 
+
+```
+version: '3.1'
+services:
+  db:
+    image: postgres
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+      
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: postgres_admin
+    links:
+      - db
+    depends_on:
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: pwdpwd
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    ports:
+      - 8080:80
+
+```
 ## Version EB CLI
 
 ```
