@@ -85,24 +85,22 @@ st.dataframe(df)
 
 ```Python
 import psycopg2
-import pandas as pd
 import uvicorn
 from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
-from flask import current_app, flash, jsonify, make_response, redirect, request, url_for
 
 import pymysql
 import mysql.connector as mysqlpyth
 
 
-class DB:
+class DataB:
 
     @classmethod
     def connexion_(cls):
         cls.host = 'database-1.cvuz5hbtumrs.us-east-2.rds.amazonaws.com'
         cls.port = 5432
         cls.user = 'postgres'
-        cls.password = '*********'
+        cls.password = '*******'
         cls.database = 'exercises'
         cls.con = psycopg2.connect(host=cls.host, port=5432, user=cls.user, password=cls.password,
                                    database=cls.database)
@@ -118,8 +116,33 @@ class DB:
     def send1(cls, sql):
         cls.cur.execute(sql)
 
+    @classmethod
+    def facilities(cls):
+        sql = ''
+        cls.cur.execute(sql)
+
+    @classmethod
+    def costname(cls):
+        sql = ''
+        cls.cur.execute(sql)
+
 
 app = FastAPI(redoc_url=None)
+
+
+@app.get("/facilities")
+async def facilities():
+    DataB.connexion()
+    data = DataB.facilities()
+    return data
+
+
+@app.get("/facilities")
+async def costname():
+    DataB.connexion()
+    data = DataB.costname()
+    return data
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host='127.0.0.1', port=8000)
