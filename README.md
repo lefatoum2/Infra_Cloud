@@ -89,42 +89,51 @@ import psycopg2
 import uvicorn
 from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
-
-import pymysql
-import mysql.connector as mysqlpyth
+import streamlit as st
+import pandas as pd
 
 
 class DataB:
 
     @classmethod
-    def connexion_(cls):
+    def connexion(cls):
         cls.host = 'database-1.cvuz5hbtumrs.us-east-2.rds.amazonaws.com'
         cls.port = 5432
         cls.user = 'postgres'
-        cls.password = '*******'
+        cls.password = '7165Jeanne?'
         cls.database = 'exercises'
         cls.con = psycopg2.connect(host=cls.host, port=5432, user=cls.user, password=cls.password,
                                    database=cls.database)
         cls.cur = cls.con.cursor()
+        cls.con.autocommit = True
 
     @classmethod
     def disconnect(cls):
-        cls.con.commit()
-        cls.con.close()
         cls.cur.close()
-
+        cls.con.close()
 
     @classmethod
     def facilities(cls):
-        sql = ''
+        DataB.connexion()
+        sql = 'select * from cd.facilities'
         cls.cur.execute(sql)
+        res = cls.cur.fetchall()
+        for i in res:
+            print(i)
+
+        return res
 
     @classmethod
     def costname(cls):
-        sql = ''
+        DataB.connexion()
+        sql = 'select name,membercost from cd.facilities'
         cls.cur.execute(sql)
+        res = cls.cur.fetchall()
+        for i in res:
+            print(i)
 
 
+""""
 app = FastAPI(redoc_url=None)
 
 
@@ -135,14 +144,15 @@ async def facilities():
     return data
 
 
-@app.get("/costname")
+@app.get("/facilities")
 async def costname():
     DataB.connexion()
     data = DataB.costname()
     return data
-
+"""
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='127.0.0.1', port=8000)
+    DataB.costname()
+    # uvicorn.run(app, host='127.0.0.1', port=8000)
 
 ```
