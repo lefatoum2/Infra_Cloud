@@ -14,7 +14,7 @@ class DataB:
         cls.host = 'database-1.cvuz5hbtumrs.us-east-2.rds.amazonaws.com'
         cls.port = 5432
         cls.user = 'postgres'
-        cls.password = '7165Jeanne?'
+        cls.password = '*******'
         cls.database = 'exercises'
         cls.con = psycopg2.connect(host=cls.host, port=5432, user=cls.user, password=cls.password,
                                    database=cls.database)
