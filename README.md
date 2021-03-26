@@ -100,7 +100,7 @@ class DataB:
         cls.host = 'database-1.cvuz5hbtumrs.us-east-2.rds.amazonaws.com'
         cls.port = 5432
         cls.user = 'postgres'
-        cls.password = '7165Jeanne?'
+        cls.password = '******'
         cls.database = 'exercises'
         cls.con = psycopg2.connect(host=cls.host, port=5432, user=cls.user, password=cls.password,
                                    database=cls.database)
@@ -118,9 +118,6 @@ class DataB:
         sql = 'select * from cd.facilities'
         cls.cur.execute(sql)
         res = cls.cur.fetchall()
-        for i in res:
-            print(i)
-
         return res
 
     @classmethod
@@ -129,30 +126,26 @@ class DataB:
         sql = 'select name,membercost from cd.facilities'
         cls.cur.execute(sql)
         res = cls.cur.fetchall()
-        for i in res:
-            print(i)
+        return res
 
 
-""""
 app = FastAPI(redoc_url=None)
 
 
 @app.get("/facilities")
 async def facilities():
-    DataB.connexion()
     data = DataB.facilities()
     return data
 
 
-@app.get("/facilities")
+@app.get("/costname")
 async def costname():
-    DataB.connexion()
     data = DataB.costname()
     return data
-"""
+
 
 if __name__ == "__main__":
-    DataB.costname()
-    # uvicorn.run(app, host='127.0.0.1', port=8000)
+    uvicorn.run(app, port=8081)
+
 
 ```
