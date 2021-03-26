@@ -6,8 +6,13 @@
 pip install awsebcli --upgrade --user
 
 ```
+## Version EB CLI
 
-## Docker-compse après la création de la base de données postgres sur RDS 
+```
+eb --version
+```
+
+## Docker-compose.yml après la création de la base de données postgres sur RDS 
 
 ```
 version: '3.1'
@@ -39,11 +44,6 @@ services:
     ports:
       - 8080:80
 
-```
-## Version EB CLI
-
-```
-eb --version
 ```
 
 ## Connection à la base de données AWS-RDS
