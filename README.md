@@ -113,9 +113,6 @@ class DataB:
         cls.con.close()
         cls.cur.close()
 
-    @classmethod
-    def send1(cls, sql):
-        cls.cur.execute(sql)
 
     @classmethod
     def facilities(cls):
