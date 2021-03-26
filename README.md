@@ -82,6 +82,7 @@ st.dataframe(df)
 
 
 ```
+## API
 
 ```Python
 import psycopg2
