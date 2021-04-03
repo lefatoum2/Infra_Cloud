@@ -149,3 +149,10 @@ if __name__ == "__main__":
 
 
 ```
+
+## Connexion à l'instance EC2 créé
+
+```
+ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
+
+```
