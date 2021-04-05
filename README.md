@@ -163,9 +163,11 @@ Il faudra juste vous munir de la DNS public de votre EC2(ubuntu@ec2-3-15-193-106
 ![title1a](./infra_cloud_images/winscp.png)
 
 ### Configuration de PuttyGen
-Chargez la clé paire (.pem) que vous avez généré par l'instance EC2 et enregistré sur votre macine local.(Pour moi , c'est "my_key_pair.pem")
 
 ![title1](./infra_cloud_images/puttygen.png)
+
+Chargez la clé paire (.pem) que vous avez généré par l'instance EC2 et enregistré sur votre macine local.(Pour moi , c'est "my_key_pair.pem").
+Ensuite générez votre propre clé et sauvegardez là pour l'utiliser dans l'outil Winscp.
 ![title2](./infra_cloud_images/keypem.png)
 
 ### Configuration de Putty
