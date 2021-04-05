@@ -190,7 +190,6 @@ ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 
 ```
 python3 api.py
-
 ```
 ### Sources
 
