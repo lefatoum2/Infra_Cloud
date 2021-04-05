@@ -88,9 +88,8 @@ st.dataframe(df)
 import psycopg2
 import uvicorn
 from fastapi import FastAPI
-from fastapi.encoders import jsonable_encoder
-import streamlit as st
-import pandas as pd
+
+
 
 
 class DataB:
@@ -145,7 +144,7 @@ async def costname():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, port=8081)
+    uvicorn.run(app,host='0.0.0.0' port=8081)
 
 
 ```
