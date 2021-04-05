@@ -166,13 +166,15 @@ Il faudra juste vous munir de la DNS public de votre EC2(ubuntu@ec2-3-15-193-106
 
 ![title1](./infra_cloud_images/puttygen.png)
 
-Chargez la clé paire (.pem) que vous avez généré par l'instance EC2 et enregistré sur votre macine local.(Pour moi , c'est "my_key_pair.pem").
+Chargez la clé paire (.pem) que vous avez généré par l'instance EC2 et enregistré sur votre machine local.(Pour moi , c'est "my_key_pair.pem").
 Ensuite générez votre propre clé et sauvegardez là pour l'utiliser dans l'outil Winscp.
 ![title2](./infra_cloud_images/keypem.png)
 
 ### Configuration de Putty
 ![title2a](./infra_cloud_images/instance.png)
+Entrez à nouveau votre DNS public propre à l'instance.
 ![title3](./infra_cloud_images/putty.png)
+Ensuite pour l'authentification(->Auth), chargez la clé générée par PuttyGen
 ![title4](./infra_cloud_images/keypem2.png)
 
 ### Autre type de connection
@@ -193,9 +195,18 @@ ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 
 
 ### Terminal 
-
+Le terminal est lancé. Entrez votre nom utilisateur(pour moi , c'est ubuntu). 
 ![title8](infra_cloud_images/terminal1.png)
 
+N'oubliez pas de télécharger les modules nécessaires fournis dans requirements.txt:
+
+```
+pip3 freeze > requirements.txt fastapi uvicorn psycopg2-binary
+```
+
+```
+pip3 install -r requirements.txt
+```
 
 Pour lancer l'application:
 ```
