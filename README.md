@@ -157,6 +157,11 @@ https://www.puttygen.com/download-putty
 
 https://winscp.net/eng/download.php
 
+Winscp permettra de gérer les fichiers et dossiers entre votre machine local et votre instance EC2.
+Il faudra juste vous munir de la DNS public de votre EC2(ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com), de la clé générée avec PuttyGen et votre nom utilisateur(pour moi , c'est ubuntu)
+
+![title1a](./infra_cloud_images/winscp.png)
+
 ### Configuration de PuttyGen
 
 ![title1](./infra_cloud_images/puttygen.png)
@@ -189,6 +194,7 @@ ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 ![title8](infra_cloud_images/terminal1.png)
 
 
+Pour lancer l'application:
 ```
 python3 api.py
 ```
