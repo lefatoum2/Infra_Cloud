@@ -149,7 +149,11 @@ if __name__ == "__main__":
 
 ```
 
-## Connexion à l'instance EC2 créé
+## Connexion à l'instance EC2 créée
+
+### Télécharger PuttyGen et Putty
+
+https://www.puttygen.com/download-putty
 
 ```
 ssh -i "file.pem" <>@<DNS IPv4 public>
