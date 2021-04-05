@@ -151,9 +151,10 @@ if __name__ == "__main__":
 
 ## Connexion à l'instance EC2 créée
 
-### Télécharger PuttyGen et Putty
+### Télécharger PuttyGen ,  Putty et WinScp
 
 https://www.puttygen.com/download-putty
+https://winscp.net/eng/download.php
 
 ```
 ssh -i "file.pem" <>@<DNS IPv4 public>
@@ -163,3 +164,6 @@ ssh -i "file.pem" <>@<DNS IPv4 public>
 ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 
 ```
+### Sources
+
+https://www.youtube.com/watch?v=oOqqwYI60FI
