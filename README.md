@@ -159,13 +159,13 @@ https://winscp.net/eng/download.php
 
 ### Configuration de PuttyGen
 
-![title1]("infra_cloud_images/puttygen.png")
-![title2]("infra_cloud_images/keypem.png")
+![title1]("./infra_cloud_images/puttygen.png")
+![title2]("./infra_cloud_images/keypem.png")
 
 ### Configuration de Putty
-![title2a]("infra_cloud_images/instance.png")
-![title3]("infra_cloud_images/putty.png")
-![title4]("infra_cloud_images/keypem2.png")
+![title2a]("./infra_cloud_images/instance.png")
+![title3]("./infra_cloud_images/putty.png")
+![title4]("./infra_cloud_images/keypem2.png")
 
 ### Autre type de connection
 
@@ -179,9 +179,9 @@ ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 ```
 
 ### Configuration du groupe de sécurité
-![title5]("infra_cloud_images/groupsecurity1.png")
-![title6]("infra_cloud_images/groupsecurity2.png")
-![title7]("infra_cloud_images/groupsecurity3.png")
+![title5]("./infra_cloud_images/groupsecurity1.png")
+![title6]("./infra_cloud_images/groupsecurity2.png")
+![title7]("./infra_cloud_images/groupsecurity3.png")
 
 ### Terminal 
 
