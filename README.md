@@ -183,6 +183,15 @@ ssh -i "my_key_pair.pem" ubuntu@ec2-3-15-193-106.us-east-2.compute.amazonaws.com
 ![title6]("infra_cloud_images/groupsecurity2.png")
 ![title7]("infra_cloud_images/groupsecurity3.png")
 
+### Terminal 
+
+![title8]("infra_cloud_images/terminal1.png")
+
+
+```
+python3 api.py
+
+```
 ### Sources
 
 https://www.youtube.com/watch?v=oOqqwYI60FI
